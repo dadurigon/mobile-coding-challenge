@@ -24,6 +24,8 @@ class ViewController: UIViewController  {
     var page = 1
     var currentIndex: IndexPath?
     
+    let activityView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    
     func switchLayout() {
         if collectionView.collectionViewLayout == gridLayout {
             // carousel layout
@@ -52,6 +54,10 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
         
         title = "Unsplash"
+        self.view.addSubview(activityView)
+        activityView.hidesWhenStopped = true
+        activityView.center = self.view.center
+        activityView.startAnimating()
         
         loadData(page: 1)
         
@@ -70,6 +76,7 @@ class ViewController: UIViewController  {
             if photoArray.count > 0 {
                 self.photos += photoArray
                 self.collectionView?.reloadData()
+                self.activityView.stopAnimating()
             }
         }
     }
@@ -90,6 +97,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
         
         let unsplash = self.photos[indexPath.row]
+        
+        cell.nameLabel.text = unsplash.id
+        cell.descriptionLabel.text = unsplash.description
         
         if let photo = unsplash.photoImage {
             cell.imageView.image = photo
