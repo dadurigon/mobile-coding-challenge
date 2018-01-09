@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B9C46972004808F00CFCDED /* UnsplashDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9C46972004808F00CFCDED /* Unsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9C469A2004808F00CFCDED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9C469C2004808F00CFCDED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B9C469F2004808F00CFCDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		8B9C46982004808F00CFCDED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B9C46972004808F00CFCDED /* UnsplashDemo.app */,
+				8B9C46972004808F00CFCDED /* Unsplash.app */,
 				8B9C46AB2004809000CFCDED /* UnsplashDemoTests.xctest */,
 			);
 			name = Products;
@@ -136,7 +136,7 @@
 			);
 			name = UnsplashDemo;
 			productName = UnsplashDemo;
-			productReference = 8B9C46972004808F00CFCDED /* UnsplashDemo.app */;
+			productReference = 8B9C46972004808F00CFCDED /* Unsplash.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8B9C46AA2004809000CFCDED /* UnsplashDemoTests */ = {
@@ -387,7 +387,7 @@
 				INFOPLIST_FILE = UnsplashDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diondurigon.UnsplashDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Unsplash;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,7 +403,7 @@
 				INFOPLIST_FILE = UnsplashDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diondurigon.UnsplashDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Unsplash;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
