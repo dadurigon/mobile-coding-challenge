@@ -38,9 +38,6 @@ class UnspashClient: NSObject, URLSessionDelegate {
                 return
             }
             
-            //            let statusCode = (response as! HTTPURLResponse).statusCode
-            //            print("URL Session Task Succeeded: HTTP \(statusCode)")
-            
             do {
                 guard let photos = try JSONSerialization.jsonObject(with: responseData, options: [])
                     as? [[String:Any?]] else {
