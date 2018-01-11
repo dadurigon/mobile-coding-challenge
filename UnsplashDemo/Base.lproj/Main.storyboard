@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UnsplashDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Unsplash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="K5X-BO-owU" customClass="PhotoCollectionViewCell" customModule="UnsplashDemo" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="K5X-BO-owU" customClass="PhotoCollectionViewCell" customModule="Unsplash" customModuleProvider="target">
                                         <rect key="frame" x="80" y="0.0" width="215" height="244"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -39,7 +39,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="215" height="244"/>
                                                 </imageView>
                                                 <view hidden="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-Av-NEb">
-                                                    <rect key="frame" x="0.0" y="184" width="215" height="60"/>
+                                                    <rect key="frame" x="0.0" y="104" width="215" height="140"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28X-n6-Xzz">
                                                             <rect key="frame" x="8" y="8" width="199" height="21"/>
@@ -50,8 +50,8 @@
                                                             <color key="textColor" red="0.96070033310000003" green="0.96083813910000004" blue="0.96067017320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17q-1Y-7aU">
-                                                            <rect key="frame" x="8" y="31" width="199" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17q-1Y-7aU">
+                                                            <rect key="frame" x="8" y="31" width="199" height="101"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="17q-1Y-7aU" secondAttribute="bottom" constant="8" id="Na4-Hg-kqP"/>
                                                         <constraint firstItem="17q-1Y-7aU" firstAttribute="top" secondItem="28X-n6-Xzz" secondAttribute="bottom" constant="2" id="dC9-j9-cHZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="17q-1Y-7aU" secondAttribute="trailing" constant="8" id="kIC-lO-CTf"/>
-                                                        <constraint firstAttribute="height" constant="60" id="ldx-Uk-cMw"/>
+                                                        <constraint firstAttribute="height" constant="140" id="ldx-Uk-cMw"/>
                                                         <constraint firstItem="17q-1Y-7aU" firstAttribute="leading" secondItem="NSM-Av-NEb" secondAttribute="leading" constant="8" id="t5k-Ba-dQS"/>
                                                         <constraint firstItem="28X-n6-Xzz" firstAttribute="leading" secondItem="NSM-Av-NEb" secondAttribute="leading" constant="8" id="yFd-J3-889"/>
                                                     </constraints>

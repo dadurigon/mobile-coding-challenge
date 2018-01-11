@@ -15,6 +15,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    var showInfo = false
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -23,6 +25,14 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
-        
+        // when in carousel layout show details, else don't show details
+    }
+    
+    override func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) {
+        if newLayout is CarouselLayout {
+            self.infoView.isHidden = false
+        } else {
+            self.infoView.isHidden = true
+        }
     }
 }

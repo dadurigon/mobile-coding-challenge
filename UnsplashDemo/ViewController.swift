@@ -48,6 +48,8 @@ class ViewController: UIViewController  {
                 self.collectionView.setCollectionViewLayout(self.gridLayout, animated: true)
             })
         }
+        
+        
     }
     
     override func viewDidLoad() {
@@ -96,10 +98,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
         
+//        debugPrint("Layout: \(self.collectionView.collectionViewLayout)")
+        
         let unsplash = self.photos[indexPath.row]
         
         cell.nameLabel.text = unsplash.id
         cell.descriptionLabel.text = unsplash.description
+        
         
         if let photo = unsplash.photoImage {
             cell.imageView.image = photo
@@ -117,6 +122,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         return cell
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switchLayout()
