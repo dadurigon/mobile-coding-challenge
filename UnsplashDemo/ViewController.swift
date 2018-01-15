@@ -32,6 +32,7 @@ class ViewController: UIViewController  {
             self.collectionView.isPagingEnabled = true
             self.collectionView.alwaysBounceVertical = false
             self.collectionView.alwaysBounceHorizontal = true
+            
             UIView.animate(withDuration: 1.0, animations: {
                 self.collectionView.collectionViewLayout.invalidateLayout()
                 
@@ -42,14 +43,13 @@ class ViewController: UIViewController  {
             self.collectionView.isPagingEnabled = false
             self.collectionView.alwaysBounceVertical = true
             self.collectionView.alwaysBounceHorizontal = false
+            
             UIView.animate(withDuration: 1.0, animations: {
                 self.collectionView.collectionViewLayout.invalidateLayout()
                 
                 self.collectionView.setCollectionViewLayout(self.gridLayout, animated: true)
             })
         }
-        
-        
     }
     
     override func viewDidLoad() {
@@ -70,7 +70,6 @@ class ViewController: UIViewController  {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func loadData(page: Int) {
@@ -98,13 +97,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
         
-//        debugPrint("Layout: \(self.collectionView.collectionViewLayout)")
-        
         let unsplash = self.photos[indexPath.row]
         
         cell.nameLabel.text = unsplash.id
         cell.descriptionLabel.text = unsplash.description
-        
         
         if let photo = unsplash.photoImage {
             cell.imageView.image = photo
@@ -122,8 +118,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         return cell
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switchLayout()
