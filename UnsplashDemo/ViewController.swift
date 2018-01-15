@@ -120,7 +120,24 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switchLayout()
+        
+        let selectedCell = collectionView.cellForItem(at: indexPath)
+        collectionView.bringSubview(toFront: selectedCell!)
+        
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+            selectedCell?.transform = CGAffineTransform(scaleX: 3, y: 3)
+        
+            self.switchLayout()
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let unselectedCell = collectionView.cellForItem(at: indexPath)
+        
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 0, options: [], animations: {
+            unselectedCell?.transform = .identity
+        })
     }
 }
 
